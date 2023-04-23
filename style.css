@@ -8,11 +8,12 @@ body {
     min-height: 100vh;
   }
   .wrapper {
-    min-height: 70vh;
-    min-width: 50vw;
+    height: 95vh;
+    width: 60vh;
+    background-color: #000000;
   }
   h1 {
-    background-color: #333;
+    /*background-color: #333;*/
     color: white;
     margin: 0;
     padding: 1rem;
@@ -20,10 +21,14 @@ body {
   }
   button {
     font-size: 2rem;
+    border-radius: 50%;
     border: 1px solid #333;
+    margin: 0.3rem;
+    color: white;
+    
   }
   .modifiers button {
-    background-color: #ccc;
+    background-color: #A5A5A5;
   }
   .modifiers button:active {
     background-color: #777;
@@ -35,7 +40,7 @@ body {
     background-color: #b78c3e;
   }
   .digits button {
-    background-color: #efefef;
+    background-color: #313131;
   }
   .digits button:active {
     background-color: #afafaf;
@@ -90,4 +95,5 @@ body {
   .digits .wide {
     flex: 2 0 60%;
     order: 1;
+    border-radius: 30%;
   }
