@@ -20,7 +20,7 @@ for (let digit of digits) {
         else if ('0123456789+-/'.includes(pressed))
             result.innerHTML += pressed
         else if (pressed == 'X')
-            result.innerHTML += 'x'
+            result.innerHTML += '*'
 
     });
     
