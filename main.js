@@ -1,26 +1,30 @@
-const digits = document.querySelectorAll('.digits button, .operations button, .modifiers button')
-const result = document.querySelector('h1')
+const digits = document.querySelectorAll('.digits button, .modifiers button, .operations button');
+const result = document.querySelector('h1');
 
-for(let digit of digits) {
-  digit.addEventListener('click', function(event) {
-    event.target.blur()
-    let target = event.target.innerHTML
-    if(target == 'AC')
-      result.innerHTML = '0'
-    else if(target == '+/-')
-      result.innerHTML = eval(`-1*(${result.innerHTML})`)
-    else if(target == '%')
-      result.innerHTML = eval(`(${result.innerHTML})/100`)
-    else if(target == '=')
-      result.innerHTML = eval(result.innerHTML)
-    else if(result.innerHTML === '0' && target != '.')
-      result.innerHTML = target
-    else if ("0123456789+-/".includes(target))
-      result.innerHTML += target
-    else if (target == 'X')
-      result.innerHTML += 'x'
-  })
-}
+
+for (let digit of digits) {
+    digit.addEventListener('click', (event) => {
+
+        let pressed = event.target.innerHTML
+
+        if (pressed == 'AC')
+            result.innerHTML = '0';
+        else if (pressed == '+/-')
+            result.innerHTML  = eval(`-1 *${result.innerHTML}`);
+        else if (pressed == '%') 
+            result.innerHTML = eval(`${result.innerHTML}/100`);
+        else if (pressed == '=')
+            result.innerHTML = eval(`${result.innerHTML}`);
+        else if (result.innerHTML === '0' && pressed != '.')
+            result.innerHTML = pressed
+        else if ('0123456789+-/'.includes(pressed))
+            result.innerHTML += pressed
+        else if (pressed == 'X')
+            result.innerHTML += 'x'
+
+    });
+    
+};
 
 document.body.addEventListener('keydown', function(event){
   if (event.key == "Escape")
