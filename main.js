@@ -19,24 +19,25 @@ for (let digit of digits) {
             result.innerHTML = pressed
         else if ('0123456789+-/'.includes(pressed))
             result.innerHTML += pressed
-        else if (pressed == 'X')
+        else if (pressed == 'x')
             result.innerHTML += '*'
 
     });
     
 };
 
-document.body.addEventListener('keydown', function(event){
-  if (event.key == "Escape")
-    result.innerHTML = '0'
-  else if (event.key == '%')
-    result.innerHTML = eval(`(${result.innerHTML})/100`)
-  else if (event.key == "Enter" || event.key == "=")
-    result.innerHTML = eval(result.innerHTML)
-  else if (result.innerHTML === '0' && "123456789".includes(event.key))
-    result.innerHTML = event.key
-  else if ("0123456789+-/".includes(event.key))
-    result.innerHTML += event.key
-  else if (event.key == "*")
-    result.innerHTML = + 'x'
-})
+document.body.addEventListener('keydown', (event)=> {
+    if (event.key == "Escape")
+      result.innerHTML = '0'
+    else if (event.key == '%')
+      result.innerHTML = eval(`(${result.innerHTML})/100`)
+    else if (event.key == "Enter" || event.key == "=")
+      result.innerHTML = eval(result.innerHTML)
+    else if (result.innerHTML === '0' && "123456789".includes(event.key))
+      result.innerHTML = event.key
+    else if ("0123456789+-/".includes(event.key))
+      result.innerHTML += event.key
+    else if (event.key == "*")
+      result.innerHTML += '*'
+
+  });
