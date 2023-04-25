@@ -1,4 +1,6 @@
 # calculator-js
 Calculadora dinâmica feita em HTML, CSS e JavaScript.
 
-![image](https://user-images.githubusercontent.com/93886627/233862929-bd947abd-6d37-489e-863c-e1e428ddae12.png)
+![image](https://user-images.githubusercontent.com/93886627/234271133-65c15200-f224-4f05-9e2d-f84bf3138d0b.png)
+
+
